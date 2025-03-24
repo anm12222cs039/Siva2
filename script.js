@@ -1,4 +1,4 @@
-const apiKey = "bd5e378503939ddaee76f12ad7a97608"; // Get your API key from OpenWeatherMap
+const apiKey = "bd5e378503939ddaee76f12ad7a97608";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
 const searchBox = document.querySelector(".search input");
@@ -21,7 +21,6 @@ async function checkWeather(city) {
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
-    // Set weather icon based on weather condition
     if(data.weather[0].main == "Clouds") {
         weatherIcon.src = "https://cdn-icons-png.flaticon.com/512/414/414927.png";
     }
